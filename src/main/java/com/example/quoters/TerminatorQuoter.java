@@ -6,10 +6,15 @@ import jakarta.annotation.PostConstruct;
 import java.util.Objects;
 
 @Profiling
+@DeprecatedClass(newImplementation = T1000.class)
 public class TerminatorQuoter implements Quoter {
 
     @InjectRandomInt(min = 2, max = 7)
     private int repeat;
+
+    public void setRepeat(int repeat) {
+        this.repeat = repeat;
+    }
 
     private String message;
 

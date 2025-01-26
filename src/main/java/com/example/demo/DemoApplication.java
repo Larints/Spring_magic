@@ -12,6 +12,7 @@ public class DemoApplication {
     public static void main(String[] args) throws InterruptedException {
         //SpringApplication.run(DemoApplication.class, args);
         ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        classPathXmlApplicationContext.getBean(Quoter.class).sayQuote();
 //        while (true) {
 //            Thread.sleep(100);
 //            classPathXmlApplicationContext.getBean(Quoter.class).sayQuote();
